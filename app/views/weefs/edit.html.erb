@@ -1,0 +1,18 @@
+  <%=form_tag "/weefs/#{@post.id}", method: :patch do %>
+
+      <%=label_tag :name %>
+      <%=text_field_tag :name, @post.name %>
+
+      <%=label_tag :text %>
+      <%=text_field_tag :text, @post.text %>
+
+      <%=label_tag :emotion_id %>
+      <%=text_field_tag :emotion_id, @post.emotion_id %>
+
+
+      <%= submit_tag "Send", class: "btn btn-default" %>
+
+
+  <% end %>
+
+  <%= link_to "Delete", "/weefs/#{@post.id}", method: :delete, data:{confirm: "Are You Sure"} %>

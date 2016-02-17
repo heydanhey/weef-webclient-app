@@ -1,0 +1,9 @@
+<h3><a href= "/weefs/<%=post.id%>" ><%= post.name_and_id %></a></h3>
+<p></p>
+<p><%= post.crazy_name %></p>
+<p><%= post.text %></p>
+<p><%= post.emotion_id %></p>
+
+<%= link_to "Edit ", "/weefs/#{post.id}/edit" %>
+ <%= link_to "Delete", "/weefs/#{post.id}", method: :delete, data:{confirm: "Are You Sure"} %>
+<hr>
